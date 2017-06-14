@@ -1,0 +1,80 @@
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col l12">
+                <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example" hidden>
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>R型指数</th>
+                        <th>C型指数</th>
+                        <th>E型指数</th>
+                        <th>S型指数</th>
+                        <th>A型指数</th>
+                        <th>I型指数</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        #set($i = 0)
+                        #foreach($log in $logList)
+                            #set($i = $i + 1)
+                        <tr class="odd gradeX">
+                            <td>$i</td>
+                            <td>
+                                #if($log.level == "system")
+                                    系统级
+                                #else
+                                    用户级
+                                #end
+                            </td>
+                            <td>$log.userName</td>
+                            <td>$log.desc</td>
+                            <td>$date.format("yyyy-MM-dd HH:mm:ss", $log.gmtCreate)</td>
+                        </tr>
+                        #end
+                    </tbody>
+                </table>
+                <!-- /.table-responsive -->
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    $(document).ready(function () {
+        $('#dataTables-example').DataTable({
+            responsive: true,
+            language: {
+                "sProcessing": "处理中...",
+                "sLengthMenu": "显示 _MENU_ 项结果",
+                "sZeroRecords": "没有匹配结果",
+                "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+                "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+                "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+                "sInfoPostFix": "",
+                "sSearch": "搜索:",
+                "sUrl": "",
+                "sEmptyTable": "表中数据为空",
+                "sLoadingRecords": "载入中...",
+                "sInfoThousands": ",",
+                "oPaginate": {
+                    "sFirst": "首页",
+                    "sPrevious": "上页",
+                    "sNext": "下页",
+                    "sLast": "末页"
+                },
+                "oAria": {
+                    "sSortAscending": ": 以升序排列此列",
+                    "sSortDescending": ": 以降序排列此列"
+                }
+            },
+            columnDefs: [
+                {
+                    targets: [ 0, 1, 2 ],
+                    className: 'mdl-data-table__cell--non-numeric'
+                }
+            ]
+        });
+        $("#dataTables-example").removeAttr("hidden");
+    });
+</script>

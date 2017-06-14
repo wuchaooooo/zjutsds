@@ -1,0 +1,10 @@
+<!-- Head layout here -->
+#parse('common/head.vm')
+<!-- Header layout here -->
+<header>
+    #parse('common/topnav.vm')
+</header>
+<!-- Content layout here -->
+$screen_content
+<!-- Footer layout here -->
+#parse('common/footer.vm')

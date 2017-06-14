@@ -1,0 +1,149 @@
+<link href="/vendors/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col l6">
+                <a class="waves-effect waves-light btn" href="#modal1">添加用户</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col l12">
+                <div class="card-panel white">
+                    <table width="100%" class="display" cellspacing="0"
+                           id="dataTables-example"
+                           hidden>
+                        <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>身份证号</th>
+                            <th>角色</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            #set($i = 0)
+                            #foreach($user in $users)
+                                #set($i = $i + 1)
+                            <tr class="odd gradeX">
+                                <td>$i</td>
+                                <td>$user.userName</td>
+                                <td>
+                                    #if($user.role == "student")
+                                        学生
+                                    #elseif($user.role == "admin")
+                                        管理员
+                                    #end
+                                </td>
+                                <td>
+                                    <a class="waves-effect waves-light btn pink" href="javascript:removeUser('$user.id')">删除</a>
+                                </td>
+                            </tr>
+                            #end
+                        </tbody>
+                    </table>
+                    <!-- /.table-responsive -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <form action="/users" method="post">
+            <div class="modal-content">
+                <h4>添加用户</h4>
+                <div class="row">
+                    <div class="input-field col l6 offset-l3 m12 s12">
+                        <input id="userName" name="userName" type="text" class="validate">
+                        <label for="userName">身份证号</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col l6 offset-l3 m12 s12">
+                        <select name="role">
+                            <option value="student">学生</option>
+                            <option value="admin">管理员</option>
+                        </select>
+                        <label>角色</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">提交</button>
+            </div>
+        </form>
+    </div>
+</main>
+
+<script src="/vendors/datatables/js/jquery.dataTables.min.js"></script>
+##<script src="/vendors/datatables/js/dataTables.bootstrap3.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#dataTables-example').DataTable({
+            responsive: true,
+            language: {
+                "sProcessing": "处理中...",
+                "sLengthMenu": "<font size='2' color='black'>每页显示条数</font> _MENU_",
+                "sZeroRecords": "没有匹配结果",
+                "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+                "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+                "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+                "sInfoPostFix": "",
+                "sSearch": "<font size='2' color='black'>搜索(多字段搜索 中间用空格):</span>",
+                "sUrl": "",
+                "sEmptyTable": "表中数据为空",
+                "sLoadingRecords": "载入中...",
+                "sInfoThousands": ",",
+                "oPaginate": {
+                    "sFirst": "首页",
+                    "sPrevious": "上页",
+                    "sNext": "下页",
+                    "sLast": "末页"
+                },
+                "oAria": {
+                    "sSortAscending": ": 以升序排列此列",
+                    "sSortDescending": ": 以降序排列此列"
+                }
+            }
+        });
+        $("#dataTables-example").removeAttr("hidden");
+
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal').modal({
+                    dismissible: true, // Modal can be dismissed by clicking outside of the modal
+                    opacity: .5, // Opacity of modal background
+                    inDuration: 300, // Transition in duration
+                    outDuration: 200, // Transition out duration
+                    startingTop: '4%', // Starting top style attribute
+                    endingTop: '10%', // Ending top style attribute
+                    ready: function (modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+
+                    },
+                    complete: function () {
+                    } // Callback for Modal close
+                }
+        );
+
+        $('select').material_select();
+    });
+
+    function removeUser(id) {
+        $.ajax({
+            url: "/users/" + id,
+            type: 'DELETE',
+            cache: false,
+            dataType: 'json',
+            success: function (data) {
+                if (data.success) {
+                    window.location.reload();
+                } else {
+                    alert(data.errorMsg);
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert("发生错误,请稍后重试");
+            }
+        });
+    }
+</script>

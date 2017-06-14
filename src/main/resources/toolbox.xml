@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tools>
+    <data type="string" key="version" value="2.0"/>
+    <!-- 在这里配置 类，在项目启动的时候就自动把类实例化好了，在页面就可以用了，例子：下面  ${test.Method()}-->
+    <toolbox scope="request">
+        <!-- currentProject util start -->
+        <tool key="authUtil" class="com.wuchaooooo.service.zjutsds.utils.AuthUtils"></tool>
+        <!-- currentProject util end -->
+        <!-- 下面的这些配置都是velocity的配置，可以不用管，也不能更改 -->
+        <!-- velocity util start -->
+        <tool class="org.apache.velocity.tools.view.CookieTool"/>
+        <tool class="org.apache.velocity.tools.view.ImportTool"/>
+        <tool class="org.apache.velocity.tools.view.IncludeTool"/>
+        <tool class="org.apache.velocity.tools.view.LinkTool"/>
+        <tool class="org.apache.velocity.tools.view.PagerTool"/>
+        <tool class="org.apache.velocity.tools.view.ParameterTool"/>
+        <tool class="org.apache.velocity.tools.view.ViewContextTool"/>
+        <tool class="org.apache.velocity.tools.generic.ContextTool"/>
+        <tool class="org.apache.velocity.tools.generic.LoopTool"/>
+        <tool class="org.apache.velocity.tools.generic.RenderTool"/>
+        <tool key="numberTool" class="org.apache.velocity.tools.generic.NumberTool"/>
+        <!-- velocity util end -->
+    </toolbox>
+
+    <toolbox scope="session" createSession="false">
+        <tool class="org.apache.velocity.tools.view.BrowserTool"/>
+    </toolbox>
+
+    <toolbox scope="application">
+        <tool class="org.apache.velocity.tools.generic.AlternatorTool"/>
+        <tool class="org.apache.velocity.tools.generic.ClassTool"/>
+        <tool class="org.apache.velocity.tools.generic.ComparisonDateTool"/>
+        <tool class="org.apache.velocity.tools.generic.ConversionTool"/>
+        <tool class="org.apache.velocity.tools.generic.DisplayTool"/>
+        <tool class="org.apache.velocity.tools.generic.EscapeTool"/>
+        <tool class="org.apache.velocity.tools.generic.FieldTool"/>
+        <tool class="org.apache.velocity.tools.generic.MathTool"/>
+        <tool class="org.apache.velocity.tools.generic.NumberTool"/>
+        <tool class="org.apache.velocity.tools.generic.ResourceTool"/>
+        <tool class="org.apache.velocity.tools.generic.SortTool"/>
+        <tool class="org.apache.velocity.tools.generic.XmlTool"/>
+        <tool class="org.apache.velocity.tools.generic.ListTool"/>
+        <tool class="org.apache.velocity.tools.generic.DateTool"/>
+
+    </toolbox>
+</tools>

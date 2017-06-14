@@ -1,0 +1,102 @@
+#set($role=$authUtil.getAuthUserRole())
+<div class="navbar-fixed">
+    <!-- Dropdown Structure -->
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!" style="color: #212121">修改密码</a></li>
+        <li class="divider"></li>
+        <li><a href="/logout" style="color: #212121">退出</a></li>
+    </ul>
+    <ul id="dropdown2" class="dropdown-content">
+        <li><a href="#!" style="color: #212121">修改密码</a></li>
+        <li class="divider"></li>
+        <li><a href="/logout" style="color: #212121">退出</a></li>
+    </ul>
+    <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="/index" class="brand-logo">职业兴趣测试</a>
+            <ul class="right hide-on-med-and-down">
+                #if($role == "ROLE_STUDENT")
+                    <li>
+                        <a href="/questions">新建测试</a>
+                    </li>
+                    <li>
+                        <a href="/result">测试结果</a>
+                    </li>
+                    <li>
+                        <a href="/demo">DEMO</a>
+                    </li>
+                #elseif($role == "ROLE_ADMIN")
+                    <li>
+                        <a href="/users">用户管理</a>
+                    </li>
+                #end
+                <li>
+                    <a class="dropdown-button" data-activates="dropdown1">
+                        <div class="chip">
+                            <img src="/images/1.jpg" alt="Contact Person">
+                            #if($role == "ROLE_ADMIN")
+                                管理员
+                            #else
+                                $authUtil.getAuthUser().name
+                            #end
+                        </div>
+                        <i class="material-icons right" style="margin-left: 0px">arrow_drop_down</i>
+                    </a>
+                </li>
+                <!-- Dropdown Trigger -->
+            ##                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">账户<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+            <ul class="right hide-on-large-only">
+                <li>
+                    <a class="dropdown-button" data-activates="dropdown2">
+                    ##                        <div class="chip">
+                        <img src="/images/1.jpg" class="circle" height="36" width="36" alt="Contact Person"
+                             style="margin-top: 10px">
+
+                    ##                        </div>
+                    </a>
+                </li>
+            </ul>
+
+
+            <ul id="nav-mobile" class="side-nav">
+                <li>
+                    <a href="/questions"><i class="material-icons">settings</i>新建测试</a>
+                </li>
+                <li>
+                    <a href="/result"><i class="material-icons">settings</i>测试结果</a>
+                </li>
+                <li>
+                    <a href="/demo"><i class="material-icons">settings</i>DEMO</a>
+                </li>
+            ##                <li>
+            ##                    <ul class="collapsible" data-collapsible="accordion" style="font-size: smaller">
+            ##                        <li>
+            ##                            <div class="collapsible-header active">
+            ##                                <i class="material-icons">account
+            ##                                    <div class="chip">
+            ##                                        <img src="/images/1.jpg" alt="Contact Person">
+            ##                                        $authUtil.getAuthUser().name
+            ##                                    </div>
+            ##                                </i>
+            ##                            </div>
+            ##                            <div class="collapsible-body second-side-nav">
+            ##                                <ul class="list">
+            ##                                    <li><a href="#!" style="color: #212121">修改密码</a></li>
+            ##                                    <li class="divider"></li>
+            ##                                    <li><a href="/logout" style="color: #212121">退出</a></li>
+            ##                                </ul>
+            ##                            </div>
+            ##                        </li>
+            ##                    </ul>
+            ##                </li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</div>
+
+
+<script>
+    $('.dropdown-button').dropdown();
+
+</script>

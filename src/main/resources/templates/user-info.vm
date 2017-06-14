@@ -1,0 +1,81 @@
+#set($layout='layout/blank.vm')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>霍兰德职业兴趣测试</title>
+    <meta charset="UTF-8">
+    <link href="/materializecss/css/materialize.min.css" rel="stylesheet" media="screen">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" media="screen">
+</head>
+<body id="login">
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col l6 offset-l3 m6 offset-m3 s12">
+                <br><br>
+                <h4 class="center-align grey-text darken-2">霍兰德职业兴趣测试</h4>
+            </div>
+            <div class="col l6 offset-l3 m6 offset-m3 s12">
+                <div class="card-panel hoverable grey lighten-3">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col l6 offset-l3 m6 offset-m3 s12 center-align">
+                                <i class="large material-icons">person_pin</i>
+                            </div>
+                            <form action="/userinfo" method="post">
+                                <div class="input-field col l8 m12 s12">
+                                    <input id="nceeId" name="nceeId" type="text" class="validate">
+                                    <label for="nceeId">高考号</label>
+                                </div>
+                                <div class="input-field col l4 m8 s8">
+                                    <input id="name" name="name" type="text" class="validate">
+                                    <label for="name">姓名</label>
+                                </div>
+                                <div class="input-field col l8 m4 s4">
+                                    <input id="nativePlace" name="nativePlace" type="text" class="validate">
+                                    <label for="nativePlace">籍贯</label>
+                                </div>
+                                <div class="input-field col l4 m4 s4">
+                                    <select name="gender">
+                                        <option value="1">男</option>
+                                        <option value="0">女</option>
+                                    </select>
+                                    <label>性别</label>
+                                </div>
+                                <div class="input-field col l8 m8 s8">
+                                    <input id="highSchool" name="highSchool" type="text" class="validate">
+                                    <label for="highSchool">毕业高中</label>
+                                </div>
+                                <div class="input-field col l4 m4 s4">
+                                    <input id="nceeScore" name="nceeScore" type="text" class="validate">
+                                    <label for="nceeScore">高考分数</label>
+                                </div>
+                                <div class="input-field col l12 m12 s12">
+                                    <input id="mobile" name="mobile" type="text" class="validate">
+                                    <label for="mobile">手机</label>
+                                </div>
+                                <div class="input-field col l12 m12 s12">
+                                    <input id="email" name="email" type="text" class="validate">
+                                    <label for="email">电子邮件</label>
+                                </div>
+                                <div class="col offset-l6 l6 m6 s6 right-align">
+                                    <button type="submit" class="waves-effect waves-light btn">提交</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script type="text/javascript" src="/vendors/jquery/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="/materializecss/js/materialize.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('select').material_select();
+    });
+</script>
+</body>
+</html>

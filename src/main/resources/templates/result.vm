@@ -1,0 +1,135 @@
+##<main>
+##    <div class="container">
+##        <br>
+##        <div class="row">
+##            <div class="col l12">
+##                <div class="card-panel teal">
+##                    <span class="white-text">
+##                        你适合从事以下职业:<br><br>
+##                        $career.desc
+##                    </span>
+##                </div>
+##            </div>
+##            <div class="col l12">
+##                <div class="card-panel white">
+##                    以下的学校和专业较为适合你<br><br>
+##                    <table class="table highlight">
+##                        <thead>
+##                        <tr>
+##                            <th>序号</th>
+##                            <th>学校</th>
+##                            <th>层次</th>
+##                            <th>高校所在地</th>
+##                            <th>专业(类)名称</th>
+####                            <th>类中所含专业</th>
+##                        </tr>
+##                        </thead>
+##                        <tbody>
+##                            #set($i = 0)
+##                            #foreach($major in $majors)
+##                                #set($i = $i + 1)
+##                            <tr class="odd gradeX">
+##                                <td>$i</td>
+##                                <td>$major.yxmc</td>
+##                                <td>$major.level</td>
+##                                <td>$major.place</td>
+##                                <td>$major.major</td>
+####                                <td>$major.subMajor</td>
+##                            </tr>
+##                            #end
+##                        </tbody>
+##                    </table>
+##                    <!-- /.table-responsive -->
+##                </div>
+##            </div>
+##        </div>
+##    </div>
+##</main>
+
+
+<!-- DataTables CSS -->
+##<link href="/vendors/datatables/css/bootstrap3.css" rel="stylesheet">
+<link href="/vendors/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col l12">
+                <div class="card-panel teal">
+                    <span class="white-text">
+                        你适合从事以下职业:<br><br>
+                        $career.desc
+                    </span>
+                </div>
+            </div>
+            <div class="col l12">
+                <div class="card-panel white">
+                    以下的学校和专业较为适合你<br><br>
+                    <table width="100%" class="display" cellspacing="0"
+                           id="dataTables-example"
+                           hidden>
+                        <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>学校</th>
+                            <th>层次</th>
+                            <th>专业(类)名称</th>
+                            <th>类中所含专业</th>
+                            <th>高校所在地</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            #set($i = 0)
+                            #foreach($major in $majors)
+                                #set($i = $i + 1)
+                            <tr class="odd gradeX">
+                                <td>$i</td>
+                                <td>$major.yxmc</td>
+                                <td>$major.level</td>
+                                <td>$major.major</td>
+                                <td>$major.subMajor</td>
+                                <td>$major.place</td>
+                            </tr>
+                            #end
+                        </tbody>
+                    </table>
+                    <!-- /.table-responsive -->
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="/vendors/datatables/js/jquery.dataTables.min.js"></script>
+##<script src="/vendors/datatables/js/dataTables.bootstrap3.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#dataTables-example').DataTable({
+            responsive: true,
+            language: {
+                "sProcessing": "处理中...",
+                "sLengthMenu": "<font size='2' color='black'> </font> _MENU_ <font size='2' color='black'> </font>",
+                "sZeroRecords": "没有匹配结果",
+                "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+                "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+                "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+                "sInfoPostFix": "",
+                "sSearch": "<font size='2' color='black'>搜索(多字段搜索 中间用空格):</span>",
+                "sUrl": "",
+                "sEmptyTable": "表中数据为空",
+                "sLoadingRecords": "载入中...",
+                "sInfoThousands": ",",
+                "oPaginate": {
+                    "sFirst": "首页",
+                    "sPrevious": "上页",
+                    "sNext": "下页",
+                    "sLast": "末页"
+                },
+                "oAria": {
+                    "sSortAscending": ": 以升序排列此列",
+                    "sSortDescending": ": 以降序排列此列"
+                }
+            }
+        });
+        $("#dataTables-example").removeAttr("hidden");
+    });
+</script>

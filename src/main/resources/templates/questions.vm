@@ -1,0 +1,1040 @@
+<div class="container">
+    <br><br>
+    <form action="/questions" method="post">
+        <div class="row">
+            <div class="col l12 m12 s12">
+                <div class="card-panel teal">
+                        <span class="white-text">
+                            西方有句俗语：“一个人的美餐，可能是另一个人的毒药。”明智的职业选择应该依赖对职业的认识，也依赖对自身的认识。如果对这两方面的认识不够全面，则可能导致在职业生涯中“搭错车”，造成对生命资源的浪费。了解职业可以通过向有关方面的专家咨询，而对自身的认识则相对比较困难。
+                            <br>
+                            <br>
+                            请完成下面60题并提交。
+                        </span>
+                </div>
+            </div>
+            <div class="col l9 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        1. 我喜欢自己动手干一些具体的、能直接看到效果的活。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q1" value="1" type="radio" id="yes1" class="with-gap"/>
+                        <label for="yes1" class="black-text">是</label>
+                        <input name="q1" value="0" type="radio" id="no1" class="with-gap"/>
+                        <label for="no1" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        2. 我喜欢弄清楚做一件事的具体要求，以明确如何去做。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q2" value="1" type="radio" id="yes2" class="with-gap"/>
+                        <label for="yes2" class="black-text">是</label>
+                        <input name="q2" value="0" type="radio" id="no2" class="with-gap"/>
+                        <label for="no2" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        3. 我认为追求的目标应该尽量高些，这样才可能在实践中多获成功。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q3" value="1" type="radio" id="yes3" class="with-gap"/>
+                        <label for="yes3" class="black-text">是</label>
+                        <input name="q3" value="0" type="radio" id="no3" class="with-gap"/>
+                        <label for="no3" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        4. 我很看重人与人之间的友情。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q4" value="1" type="radio" id="yes4" class="with-gap"/>
+                        <label for="yes4" class="black-text">是</label>
+                        <input name="q4" value="0" type="radio" id="no4" class="with-gap"/>
+                        <label for="no4" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        5. 我常常想寻找独特的方式来表现自己的创造力。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q5" value="1" type="radio" id="yes5" class="with-gap"/>
+                        <label for="yes5" class="black-text">是</label>
+                        <input name="q5" value="0" type="radio" id="no5" class="with-gap"/>
+                        <label for="no5" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        6. 我喜欢阅读比较理性的书籍。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q6" value="1" type="radio" id="yes6" class="with-gap"/>
+                        <label for="yes6" class="black-text">是</label>
+                        <input name="q6" value="0" type="radio" id="no6" class="with-gap"/>
+                        <label for="no6" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        7. 我喜欢生活和工作的场所布置得朴实些、实用些。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q7" value="1" type="radio" id="yes7" class="with-gap"/>
+                        <label for="yes7" class="black-text">是</label>
+                        <input name="q7" value="0" type="radio" id="no7" class="with-gap"/>
+                        <label for="no7" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        8. 在开始做一件事情以前，我喜欢有条不紊地做好所有准备工作。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q8" value="1" type="radio" id="yes8" class="with-gap"/>
+                        <label for="yes8" class="black-text">是</label>
+                        <input name="q8" value="0" type="radio" id="no8" class="with-gap"/>
+                        <label for="no8" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        9. 我善于带动他人，影响他人。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q9" value="1" type="radio" id="yes9" class="with-gap"/>
+                        <label for="yes9" class="black-text">是</label>
+                        <input name="q9" value="0" type="radio" id="no9" class="with-gap"/>
+                        <label for="no9" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        10. 为了帮助他人，我愿意作些自我牺牲。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q10" value="1" type="radio" id="yes10" class="with-gap"/>
+                        <label for="yes10" class="black-text">是</label>
+                        <input name="q10" value="0" type="radio" id="no10" class="with-gap"/>
+                        <label for="no10" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        11. 当我进入创造性工作时，我会忘却一切。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q11" value="1" type="radio" id="yes11" class="with-gap"/>
+                        <label for="yes11" class="black-text">是</label>
+                        <input name="q11" value="0" type="radio" id="no11" class="with-gap"/>
+                        <label for="no11" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        12. 在我找到解决困难的办法之前，通常我不会罢手。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q12" value="1" type="radio" id="yes12" class="with-gap"/>
+                        <label for="yes12" class="black-text">是</label>
+                        <input name="q12" value="0" type="radio" id="no12" class="with-gap"/>
+                        <label for="no12" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        13. 我喜欢直截了当，不喜欢说话婉转。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q13" value="1" type="radio" id="yes13" class="with-gap"/>
+                        <label for="yes13" class="black-text">是</label>
+                        <input name="q13" value="0" type="radio" id="no13" class="with-gap"/>
+                        <label for="no13" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        14. 我比较善于注意和检查细节。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q14" value="1" type="radio" id="yes14" class="with-gap"/>
+                        <label for="yes14" class="black-text">是</label>
+                        <input name="q14" value="0" type="radio" id="no14" class="with-gap"/>
+                        <label for="no14" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        15. 我乐于在从事的工作中承当主要责任人。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q15" value="1" type="radio" id="yes15" class="with-gap"/>
+                        <label for="yes15" class="black-text">是</label>
+                        <input name="q15" value="0" type="radio" id="no15" class="with-gap"/>
+                        <label for="no15" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        16. 在解决个人问题时，我喜欢找他人商量。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q16" value="1" type="radio" id="yes16" class="with-gap"/>
+                        <label for="yes16" class="black-text">是</label>
+                        <input name="q16" value="0" type="radio" id="no16" class="with-gap"/>
+                        <label for="no16" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        17. 我的情绪很容易激动。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q17" value="1" type="radio" id="yes17" class="with-gap"/>
+                        <label for="yes17" class="black-text">是</label>
+                        <input name="q17" value="0" type="radio" id="no17" class="with-gap"/>
+                        <label for="no17" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        18. 一接触到有关新发明、新发现的信息，我就会感到兴奋。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q18" value="1" type="radio" id="yes18" class="with-gap"/>
+                        <label for="yes18" class="black-text">是</label>
+                        <input name="q18" value="0" type="radio" id="no18" class="with-gap"/>
+                        <label for="no18" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        19. 我喜欢在户外工作和活动。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q19" value="1" type="radio" id="yes19" class="with-gap"/>
+                        <label for="yes19" class="black-text">是</label>
+                        <input name="q19" value="0" type="radio" id="no19" class="with-gap"/>
+                        <label for="no19" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        20. 我喜欢有规律、喜欢干净整洁。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q20" value="1" type="radio" id="yes20" class="with-gap"/>
+                        <label for="yes20" class="black-text">是</label>
+                        <input name="q20" value="0" type="radio" id="no20" class="with-gap"/>
+                        <label for="no20" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        21. 每当我做重大决定前，总觉得异常兴奋。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q21" value="1" type="radio" id="yes21" class="with-gap"/>
+                        <label for="yes21" class="black-text">是</label>
+                        <input name="q21" value="0" type="radio" id="no21" class="with-gap"/>
+                        <label for="no21" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        22. 当别人叙述个人烦恼时，我能做一个很好的倾听者。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q22" value="1" type="radio" id="yes22" class="with-gap"/>
+                        <label for="yes22" class="black-text">是</label>
+                        <input name="q22" value="0" type="radio" id="no22" class="with-gap"/>
+                        <label for="no22" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        23. 我喜欢欣赏艺术展和好的戏剧与电影。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q23" value="1" type="radio" id="yes23" class="with-gap"/>
+                        <label for="yes23" class="black-text">是</label>
+                        <input name="q23" value="0" type="radio" id="no23" class="with-gap"/>
+                        <label for="no23" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        24. 我喜欢先研究所有的细节，然后再作出合乎逻辑的决定。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q24" value="1" type="radio" id="yes24" class="with-gap"/>
+                        <label for="yes24" class="black-text">是</label>
+                        <input name="q24" value="0" type="radio" id="no24" class="with-gap"/>
+                        <label for="no24" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        25. 我认为手工操作和体力劳动永不过时。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q25" value="1" type="radio" id="yes25" class="with-gap"/>
+                        <label for="yes25" class="black-text">是</label>
+                        <input name="q25" value="0" type="radio" id="no25" class="with-gap"/>
+                        <label for="no25" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        26. 我不喜欢由我一个人负责作重大决策。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q26" value="1" type="radio" id="yes26" class="with-gap"/>
+                        <label for="yes26" class="black-text">是</label>
+                        <input name="q26" value="0" type="radio" id="no26" class="with-gap"/>
+                        <label for="no26" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        27. 我善于与能为我提供好处的人交往。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q27" value="1" type="radio" id="yes27" class="with-gap"/>
+                        <label for="yes27" class="black-text">是</label>
+                        <input name="q27" value="0" type="radio" id="no27" class="with-gap"/>
+                        <label for="no27" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        28. 我善于于调解他人之间的矛盾。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q28" value="1" type="radio" id="yes28" class="with-gap"/>
+                        <label for="yes28" class="black-text">是</label>
+                        <input name="q28" value="0" type="radio" id="no28" class="with-gap"/>
+                        <label for="no28" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        29. 我喜欢比较别致的着装，喜欢新颖的色彩与风格。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q29" value="1" type="radio" id="yes29" class="with-gap"/>
+                        <label for="yes29" class="black-text">是</label>
+                        <input name="q29" value="0" type="radio" id="no29" class="with-gap"/>
+                        <label for="no29" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        30. 我对各种大自然的奥秘充满好奇。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q30" value="1" type="radio" id="yes30" class="with-gap"/>
+                        <label for="yes30" class="black-text">是</label>
+                        <input name="q30" value="0" type="radio" id="no30" class="with-gap"/>
+                        <label for="no30" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        31. 我不怕干体力活，通常还知道如何巧干体力活。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q31" value="1" type="radio" id="yes31" class="with-gap"/>
+                        <label for="yes31" class="black-text">是</label>
+                        <input name="q31" value="0" type="radio" id="no31" class="with-gap"/>
+                        <label for="no31" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        32. 在作决定时，我喜欢保险系数比较高的方案，不喜欢冒险。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q32" value="1" type="radio" id="yes32" class="with-gap"/>
+                        <label for="yes32" class="black-text">是</label>
+                        <input name="q32" value="0" type="radio" id="no32" class="with-gap"/>
+                        <label for="no32" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        33. 我喜欢竞争与挑战。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q33" value="1" type="radio" id="yes33" class="with-gap"/>
+                        <label for="yes33" class="black-text">是</label>
+                        <input name="q33" value="0" type="radio" id="no33" class="with-gap"/>
+                        <label for="no33" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        34. 我喜欢与人交往，以丰富自己的阅历。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q34" value="1" type="radio" id="yes34" class="with-gap"/>
+                        <label for="yes34" class="black-text">是</label>
+                        <input name="q34" value="0" type="radio" id="no34" class="with-gap"/>
+                        <label for="no34" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        35. 我善于用自己的工作体现自己的情感。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q35" value="1" type="radio" id="yes35" class="with-gap"/>
+                        <label for="yes35" class="black-text">是</label>
+                        <input name="q35" value="0" type="radio" id="no35" class="with-gap"/>
+                        <label for="no35" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        36. 在动手做一件事情之前，我喜欢先在脑中仔细思索几遍。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q36" value="1" type="radio" id="yes36" class="with-gap"/>
+                        <label for="yes36" class="black-text">是</label>
+                        <input name="q36" value="0" type="radio" id="no36" class="with-gap"/>
+                        <label for="no36" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        37. 我不喜欢购买现成的物品，希望能买到材料自己做。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q37" value="1" type="radio" id="yes37" class="with-gap"/>
+                        <label for="yes37" class="black-text">是</label>
+                        <input name="q37" value="0" type="radio" id="no37" class="with-gap"/>
+                        <label for="no37" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        38. 只要我按照规则做，心里就会踏实。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q38" value="1" type="radio" id="yes38" class="with-gap"/>
+                        <label for="yes38" class="black-text">是</label>
+                        <input name="q38" value="0" type="radio" id="no38" class="with-gap"/>
+                        <label for="no38" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        39. 只要成果大，我愿意冒险。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q39" value="1" type="radio" id="yes39" class="with-gap"/>
+                        <label for="yes39" class="black-text">是</label>
+                        <input name="q39" value="0" type="radio" id="no39" class="with-gap"/>
+                        <label for="no39" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        40. 我通常能较敏感地觉察到他人的需求。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q40" value="1" type="radio" id="yes40" class="with-gap"/>
+                        <label for="yes40" class="black-text">是</label>
+                        <input name="q40" value="0" type="radio" id="no40" class="with-gap"/>
+                        <label for="no40" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        41. 音乐、绘画、文字、任何优美的东西都特别容易给我带来好心情。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q41" value="1" type="radio" id="yes41" class="with-gap"/>
+                        <label for="yes41" class="black-text">是</label>
+                        <input name="q41" value="0" type="radio" id="no41" class="with-gap"/>
+                        <label for="no41" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        42. 我把受教育看成一辈子不断提高自我的过程。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q42" value="1" type="radio" id="yes42" class="with-gap"/>
+                        <label for="yes42" class="black-text">是</label>
+                        <input name="q42" value="0" type="radio" id="no42" class="with-gap"/>
+                        <label for="no42" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        43. 我喜欢把东西拆开，然后再使之复原。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q43" value="1" type="radio" id="yes43" class="with-gap"/>
+                        <label for="yes43" class="black-text">是</label>
+                        <input name="q43" value="0" type="radio" id="no43" class="with-gap"/>
+                        <label for="no43" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        44. 我喜欢每一分钟都花得有名堂。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q44" value="1" type="radio" id="yes44" class="with-gap"/>
+                        <label for="yes44" class="black-text">是</label>
+                        <input name="q44" value="0" type="radio" id="no44" class="with-gap"/>
+                        <label for="no44" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        45. 我喜欢启动一项项工作，而具体的细节则让其他人去负责。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q45" value="1" type="radio" id="yes45" class="with-gap"/>
+                        <label for="yes45" class="black-text">是</label>
+                        <input name="q45" value="0" type="radio" id="no45" class="with-gap"/>
+                        <label for="no45" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        46. 我喜欢帮助他人，提高他人的学习能力。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q46" value="1" type="radio" id="yes46" class="with-gap"/>
+                        <label for="yes46" class="black-text">是</label>
+                        <input name="q46" value="0" type="radio" id="no46" class="with-gap"/>
+                        <label for="no46" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        47. 我很善于想象。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q47" value="1" type="radio" id="yes47" class="with-gap"/>
+                        <label for="yes47" class="black-text">是</label>
+                        <input name="q47" value="0" type="radio" id="no47" class="with-gap"/>
+                        <label for="no47" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        48. 有时候我能独坐很长时间来阅读、思考或做一件难对付的事情。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q48" value="1" type="radio" id="yes48" class="with-gap"/>
+                        <label for="yes48" class="black-text">是</label>
+                        <input name="q48" value="0" type="radio" id="no48" class="with-gap"/>
+                        <label for="no48" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        49. 我不怎么在乎在干活时弄脏自己。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q49" value="1" type="radio" id="yes49" class="with-gap"/>
+                        <label for="yes49" class="black-text">是</label>
+                        <input name="q49" value="0" type="radio" id="no49" class="with-gap"/>
+                        <label for="no49" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        50. 只要能仔细地完整地做完一件事情，我就感到十分满足。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q50" value="1" type="radio" id="yes50" class="with-gap"/>
+                        <label for="yes50" class="black-text">是</label>
+                        <input name="q50" value="0" type="radio" id="no50" class="with-gap"/>
+                        <label for="no50" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        51. 我喜欢在团体中担当主角。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q51" value="1" type="radio" id="yes51" class="with-gap"/>
+                        <label for="yes51" class="black-text">是</label>
+                        <input name="q51" value="0" type="radio" id="no51" class="with-gap"/>
+                        <label for="no51" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        52. 如果我与他人有了矛盾，我喜欢采取平和的方式加以解决。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q52" value="1" type="radio" id="yes52" class="with-gap"/>
+                        <label for="yes52" class="black-text">是</label>
+                        <input name="q52" value="0" type="radio" id="no52" class="with-gap"/>
+                        <label for="no52" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        53. 我对环境布置比较讲究，哪怕是一般的色彩、图案都希望能赏心悦目。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q53" value="1" type="radio" id="yes53" class="with-gap"/>
+                        <label for="yes53" class="black-text">是</label>
+                        <input name="q53" value="0" type="radio" id="no53" class="with-gap"/>
+                        <label for="no53" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        54. 哪怕我明知结果会与我的期盼相悖，我也要探究到底。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q54" value="1" type="radio" id="yes54" class="with-gap"/>
+                        <label for="yes54" class="black-text">是</label>
+                        <input name="q54" value="0" type="radio" id="no54" class="with-gap"/>
+                        <label for="no54" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        55. 我很看重有健壮的灵活的身体。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q55" value="1" type="radio" id="yes55" class="with-gap"/>
+                        <label for="yes55" class="black-text">是</label>
+                        <input name="q55" value="0" type="radio" id="no55" class="with-gap"/>
+                        <label for="no55" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        56. 如果我说了我来干，我就会把这件事件彻底干好。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q56" value="1" type="radio" id="yes56" class="with-gap"/>
+                        <label for="yes56" class="black-text">是</label>
+                        <input name="q56" value="0" type="radio" id="no56" class="with-gap"/>
+                        <label for="no56" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        57. 我喜欢谈判，喜欢讨价还价。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q57" value="1" type="radio" id="yes57" class="with-gap"/>
+                        <label for="yes57" class="black-text">是</label>
+                        <input name="q57" value="0" type="radio" id="no57" class="with-gap"/>
+                        <label for="no57" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        58. 人们喜欢向我倾诉他们的烦恼。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q58" value="1" type="radio" id="yes58" class="with-gap"/>
+                        <label for="yes58" class="black-text">是</label>
+                        <input name="q58" value="0" type="radio" id="no58" class="with-gap"/>
+                        <label for="no58" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        59. 我喜欢尝试有创意的新的主意。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q59" value="1" type="radio" id="yes59" class="with-gap"/>
+                        <label for="yes59" class="black-text">是</label>
+                        <input name="q59" value="0" type="radio" id="no59" class="with-gap"/>
+                        <label for="no59" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col l9  m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        60. 凡事我都喜欢问一个“为什么”。
+                    </span>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <div class="card-panel white">
+                    <span class="black-text">
+                        <input name="q60" value="1" type="radio" id="yes60" class="with-gap"/>
+                        <label for="yes60" class="black-text">是</label>
+                        <input name="q60" value="0" type="radio" id="no60" class="with-gap"/>
+                        <label for="no60" class="black-text">否</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col offset-l8 l4 m12">
+                <button type="submit" class="waves-effect waves-light btn">提交</button>
+            </div>
+        </div>
+    </form>
+</div>

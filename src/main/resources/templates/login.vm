@@ -1,0 +1,89 @@
+#set($layout='layout/blank.vm')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>登陆</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <link href="/materializecss/css/materialize.min.css" rel="stylesheet" media="screen">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" media="screen">
+</head>
+<body id="login">
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col l6 offset-l3 m8 offset-m2 s12">
+                <br><br><br>
+                <h3 class="center-align grey-text darken-2">职业兴趣测试</h3>
+            </div>
+            #if($error)
+                <div class="col l6 offset-l3 m8 offset-m2 s12">
+                    <div class="card-panel red center-align">
+                        <span class="white-text">当前测试时期暂不收费，请考生点击【注册】联系管理员，<br>审核通过后可以进行职业个性测试和学校专业初选。</span>
+                    </div>
+                </div>
+            #end
+            <div class="col l6 offset-l3 m8 offset-m2 s12">
+                <div class="card-panel hoverable grey lighten-3">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col l6 offset-l3 m6 offset-m3 s12 center-align">
+                                <i class="large material-icons">person_pin</i>
+                            </div>
+                            <form action="/login" method="post">
+                                <div class="input-field col l12 m12 s12">
+                                    <input id="username" name="username" type="text" class="validate">
+                                    <label for="username">身份证号</label>
+                                </div>
+                                <div class="input-field col l12 m12 s12">
+                                    <input id="password" name="password" type="password" class="validate">
+                                    <label for="password">密码（初始密码为666666）</label>
+                                </div>
+                                <div class="col l6 m6 s6 left-align">
+                                    <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light btn pink" href="#modal1">注册</a>
+                                </div>
+                                <div class="col l6 m6 s6 right-align">
+                                    <button type="submit" class="waves-effect waves-light btn">登录</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>管理员联系方式</h4>
+            <p>发送身份证号至邮箱【example@qq.com】或短信【18288888888】</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">好的</a>
+        </div>
+    </div>
+</main>
+
+<script type="text/javascript" src="/vendors/jquery/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="/materializecss/js/materialize.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal').modal({
+                    dismissible: true, // Modal can be dismissed by clicking outside of the modal
+                    opacity: .5, // Opacity of modal background
+                    inDuration: 300, // Transition in duration
+                    outDuration: 200, // Transition out duration
+                    startingTop: '4%', // Starting top style attribute
+                    endingTop: '10%', // Ending top style attribute
+                    ready: function (modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+
+                    },
+                    complete: function () {
+                    } // Callback for Modal close
+                }
+        );
+    });
+</script>
+</body>
+</html>
