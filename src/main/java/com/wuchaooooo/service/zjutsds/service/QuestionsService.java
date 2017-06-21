@@ -2,10 +2,10 @@ package com.wuchaooooo.service.zjutsds.service;
 
 import com.wuchaooooo.service.zjutsds.dao.CareerDAO;
 import com.wuchaooooo.service.zjutsds.dao.MajorDAO;
-import com.wuchaooooo.service.zjutsds.dao.UserInfoDAO;
+import com.wuchaooooo.service.zjutsds.dao.UserDAO;
 import com.wuchaooooo.service.zjutsds.pojo.po.PCareer;
 import com.wuchaooooo.service.zjutsds.pojo.po.PMajor;
-import com.wuchaooooo.service.zjutsds.pojo.po.PUserInfo;
+import com.wuchaooooo.service.zjutsds.pojo.po.PUser;
 import com.wuchaooooo.service.zjutsds.pojo.vo.VCareer;
 import com.wuchaooooo.service.zjutsds.pojo.vo.VMajor;
 import com.wuchaooooo.service.zjutsds.pojo.vo.VResult;
@@ -23,25 +23,24 @@ import java.util.*;
 @Service
 public class QuestionsService {
     @Autowired
-    private UserInfoDAO userInfoDAO;
+    private UserDAO userDAO;
     @Autowired
     private CareerDAO careerDAO;
     @Autowired
     private MajorDAO majorDAO;
 
     public int saveResult(VResult vResult) {
-        PUserInfo pUserInfo = new PUserInfo();
-        pUserInfo.setIdCard(AuthUtils.getAuthUser().getUserName());
+        PUser pUser = new PUser();
         Map<String, Integer> map = getNumOfType(vResult);
-        pUserInfo.setR(map.get("R"));
-        pUserInfo.setC(map.get("C"));
-        pUserInfo.setE(map.get("E"));
-        pUserInfo.setS(map.get("S"));
-        pUserInfo.setA(map.get("A"));
-        pUserInfo.setI(map.get("I"));
-        pUserInfo.setSdsName(vResult.getSdsName());
-        pUserInfo.setGmtCreateTopic(new Date());
-        return userInfoDAO.saveResult(pUserInfo);
+        pUser.setR(map.get("R"));
+        pUser.setC(map.get("C"));
+        pUser.setE(map.get("E"));
+        pUser.setS(map.get("S"));
+        pUser.setA(map.get("A"));
+        pUser.setI(map.get("I"));
+        pUser.setSdsName(vResult.getSdsName());
+        pUser.setGmtCreateTopic(new Date());
+        return userDAO.saveResult(pUser);
     }
 
     //获取前端的问卷答案，计算出各问题回答"是"的题数

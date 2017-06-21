@@ -41,12 +41,8 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         String password = (String) authentication.getCredentials();
         UserDetails user = customUserDetailsService.loadUserByUsername(username);
         LOGGER.info("password={}, needPassword={}", password, user.getPassword());
-        String s = passwordEncoder().encode("666666");
+        String s = passwordEncoder().encode("zjut@ZYTB");
         VUser vUser = userService.getUser(username, user.getPassword());
-        VUserInfo vUserInfo = userService.getUserInfo(username);
-        if (vUserInfo != null) {
-            vUser.setName(vUserInfo.getName());
-        }
         //密码匹配验证
         if (passwordEncoder().matches(password, user.getPassword())) {
             Collection<? extends GrantedAuthority> authorities = user.getAuthorities();

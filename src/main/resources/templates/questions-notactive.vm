@@ -1,0 +1,9 @@
+<main>
+    <div class="row">
+        <div class="col l6 offset-l3">
+            <div class="card-panel red center-align">
+                <span class="white-text">当前测试时期暂不收费，请考生点击联系管理员.<br>手机：17777777777，邮件：example@qq.com。<br>审核通过后可以进行职业个性测试和学校专业初选。</span>
+            </div>
+        </div>
+    </div>
+</main>

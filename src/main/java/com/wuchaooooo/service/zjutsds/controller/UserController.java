@@ -42,4 +42,13 @@ public class UserController {
         ajaxRequestResult.setSuccess(true);
         return ajaxRequestResult;
     }
+
+    @RequestMapping(value = "/users/activate/{id}", method = RequestMethod.PUT)
+    @ResponseBody
+    public AjaxRequestResult activateUser(@PathVariable("id") int id) {
+        AjaxRequestResult ajaxRequestResult = new AjaxRequestResult();
+        userService.activateUser(id);
+        ajaxRequestResult.setSuccess(true);
+        return ajaxRequestResult;
+    }
 }

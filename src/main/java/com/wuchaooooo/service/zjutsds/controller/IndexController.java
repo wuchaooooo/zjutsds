@@ -1,5 +1,6 @@
 package com.wuchaooooo.service.zjutsds.controller;
 
+import com.wuchaooooo.service.zjutsds.pojo.vo.VUser;
 import com.wuchaooooo.service.zjutsds.pojo.vo.VUserInfo;
 import com.wuchaooooo.service.zjutsds.service.UserService;
 import com.wuchaooooo.service.zjutsds.utils.AuthUtils;
@@ -34,6 +35,20 @@ public class IndexController {
         return "login";
     }
 
+    @RequestMapping(value = "/signup", method = RequestMethod.GET)
+    public String signUp() {
+        return "signup";
+    }
+
+    @RequestMapping(value = "/signup", method = RequestMethod.POST)
+    public String signUp(String name, String username) {
+        VUser vUser = new VUser();
+        vUser.setName(name);
+        vUser.setUserName(username);
+        userService.saveUser(vUser);
+        return "redirect:/login";
+    }
+
     @RequestMapping(value = "/userinfo", method = RequestMethod.GET)
     public String getUserInfo() {
         return "user-info";
@@ -42,7 +57,6 @@ public class IndexController {
     @RequestMapping(value = "/userinfo", method = RequestMethod.POST)
     public String saveUserInfo(VUserInfo vUserInfo) {
         vUserInfo.setIdCard(AuthUtils.getAuthUser().getUserName());
-        AuthUtils.getAuthUser().setName(vUserInfo.getName());
         userService.saveUserInfo(vUserInfo);
         return "redirect:/questions";
     }
@@ -53,7 +67,7 @@ public class IndexController {
         boolean haveUserInfo = userService.haveUserInfo(AuthUtils.getAuthUser().getUserName());
         if (haveUserInfo) {
             //有，跳转至index页面
-            return "questions";
+            return "redirect:/questions";
         } else {
             if (AuthUtils.getAuthUserRole().equals("ROLE_ADMIN")) {
                 //管理员登录

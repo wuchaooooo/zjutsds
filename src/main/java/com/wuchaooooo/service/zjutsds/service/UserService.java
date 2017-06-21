@@ -1,9 +1,7 @@
 package com.wuchaooooo.service.zjutsds.service;
 
 import com.wuchaooooo.service.zjutsds.dao.UserDAO;
-import com.wuchaooooo.service.zjutsds.dao.UserInfoDAO;
 import com.wuchaooooo.service.zjutsds.pojo.po.PUser;
-import com.wuchaooooo.service.zjutsds.pojo.po.PUserInfo;
 import com.wuchaooooo.service.zjutsds.pojo.vo.VUser;
 import com.wuchaooooo.service.zjutsds.pojo.vo.VUserInfo;
 import org.springframework.beans.BeanUtils;
@@ -11,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -23,8 +20,6 @@ import java.util.List;
 public class UserService {
     @Autowired
     private UserDAO userDAO;
-    @Autowired
-    private UserInfoDAO userInfoDAO;
     @Autowired
     private PasswordEncoder passwordEncoder;
 
@@ -46,20 +41,11 @@ public class UserService {
     }
 
     public int saveUserInfo(VUserInfo vUserInfo) {
-        PUserInfo pUserInfo = new PUserInfo();
-        BeanUtils.copyProperties(vUserInfo, pUserInfo);
-        pUserInfo.setGmtCreateInfo(new Date());
-        return userInfoDAO.saveUserInfo(pUserInfo);
-    }
-
-    public VUserInfo getUserInfo(String userName) {
-        PUserInfo pUserInfo = userInfoDAO.getUserInfo(userName);
-        VUserInfo vUserInfo = new VUserInfo();
-        if (pUserInfo != null) {
-            BeanUtils.copyProperties(pUserInfo, vUserInfo);
-            return vUserInfo;
-        }
-        return null;
+        PUser pUser = new PUser();
+        BeanUtils.copyProperties(vUserInfo, pUser);
+        pUser.setUserName(vUserInfo.getIdCard());
+        pUser.setGmtCreateInfo(new Date());
+        return userDAO.saveUserInfo(pUser);
     }
 
     public List<VUser> listUser() {
@@ -79,9 +65,9 @@ public class UserService {
     public int saveUser(VUser vUser) {
         PUser pUser = new PUser();
         BeanUtils.copyProperties(vUser, pUser);
-        pUser.setGmtCreate(new Date());
         String password = passwordEncoder.encode("666666");
         pUser.setPassword(password);
+        pUser.setRole("student");
         return userDAO.saveUser(pUser);
     }
 
@@ -89,9 +75,18 @@ public class UserService {
         return userDAO.removeUser(id);
     }
 
+    public int activateUser(int id) {
+        PUser pUser = userDAO.getUser(id);
+        if (pUser.getIsActivated() == 1) {
+            return userDAO.activateUser(0, id);
+        } else {
+            return userDAO.activateUser(1, id);
+        }
+    }
+
     public boolean haveUserInfo(String userName) {
-        PUserInfo pUserInfo = userInfoDAO.getUserInfo(userName);
-        if (pUserInfo == null) {
+        PUser pUser = userDAO.getUser(userName);
+        if (pUser.getHighSchool() == null) {
             return false;
         }
         return true;

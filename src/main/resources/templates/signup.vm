@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>登陆</title>
+    <title>注册</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
     <link href="/materializecss/css/materialize.min.css" rel="stylesheet" media="screen">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" media="screen">
@@ -13,12 +13,12 @@
         <div class="row">
             <div class="col l6 offset-l3 m8 offset-m2 s12">
                 <br><br><br>
-                <h3 class="center-align grey-text darken-2">职业兴趣测试</h3>
+                <h3 class="center-align grey-text darken-2">职业兴趣测试-注册</h3>
             </div>
             #if($error)
                 <div class="col l6 offset-l3 m8 offset-m2 s12">
                     <div class="card-panel red center-align">
-                        <span class="white-text">$error</span>
+                        <span class="white-text">当前测试时期暂不收费，请考生点击【注册】联系管理员，<br>审核通过后可以进行职业个性测试和学校专业初选。</span>
                     </div>
                 </div>
             #end
@@ -29,21 +29,17 @@
                             <div class="col l6 offset-l3 m6 offset-m3 s12 center-align">
                                 <i class="large material-icons">person_pin</i>
                             </div>
-                            <form action="/login" method="post">
+                            <form action="/signup" method="post">
+                                <div class="input-field col l12 m12 s12">
+                                    <input id="name" name="name" type="text" class="validate">
+                                    <label for="name">姓名</label>
+                                </div>
                                 <div class="input-field col l12 m12 s12">
                                     <input id="username" name="username" type="text" class="validate">
                                     <label for="username">身份证号</label>
                                 </div>
-                                <div class="input-field col l12 m12 s12">
-                                    <input id="password" name="password" type="password" class="validate">
-                                    <label for="password">密码（初始密码为666666）</label>
-                                </div>
-                                <div class="col l6 m6 s6 left-align">
-                                    <!-- Modal Trigger -->
-                                    <a class="waves-effect waves-light btn pink" href="/signup">注册</a>
-                                </div>
-                                <div class="col l6 m6 s6 right-align">
-                                    <button type="submit" class="waves-effect waves-light btn">登录</button>
+                                <div class="col l6 offset-l6 m6 s6 right-align">
+                                    <button type="submit" class="waves-effect waves-light btn">注册</button>
                                 </div>
                             </form>
                         </div>

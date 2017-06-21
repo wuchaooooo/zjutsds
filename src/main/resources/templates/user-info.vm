@@ -23,13 +23,9 @@
                                 <i class="large material-icons">person_pin</i>
                             </div>
                             <form action="/userinfo" method="post">
-                                <div class="input-field col l8 m12 s12">
+                                <div class="input-field col l12 m12 s12">
                                     <input id="nceeId" name="nceeId" type="text" class="validate">
                                     <label for="nceeId">高考号</label>
-                                </div>
-                                <div class="input-field col l4 m8 s8">
-                                    <input id="name" name="name" type="text" class="validate">
-                                    <label for="name">姓名</label>
                                 </div>
                                 <div class="input-field col l8 m4 s4">
                                     <input id="nativePlace" name="nativePlace" type="text" class="validate">

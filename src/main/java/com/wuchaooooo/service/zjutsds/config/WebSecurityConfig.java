@@ -33,7 +33,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 //允许所有用户访问的url
-                .antMatchers("/login", "/images/**", "/materializecss/**", "/vendor/**", "/**/*.js", "/**/*.css", "/**/*.html", "/**/*.json").permitAll()
+                .antMatchers("/login", "/signup", "/images/**", "/materializecss/**", "/vendor/**", "/**/*.js", "/**/*.css", "/**/*.html", "/**/*.json").permitAll()
                 //其他地址的访问均需验证权限
                 .anyRequest().authenticated()
                 .and()

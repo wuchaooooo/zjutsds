@@ -27,20 +27,20 @@ public class DatasourceConfig {
 	private Environment env;
 
 	//生产环境
-	@Value("${prod.mysql.url}")
-	private String db1Url;
-	@Value("${prod.mysql.user}")
-	private String db1User;
-	@Value("${prod.mysql.pass}")
-	private String db1Pass;
+//	@Value("${prod.mysql.url}")
+//	private String db1Url;
+//	@Value("${prod.mysql.user}")
+//	private String db1User;
+//	@Value("${prod.mysql.pass}")
+//	private String db1Pass;
 
 //本地环境
-//    @Value("${local.mysql.url}")
-//    private String db1Url;
-//    @Value("${local.mysql.user}")
-//    private String db1User;
-//    @Value("${local.mysql.pass}")
-//    private String db1Pass;
+    @Value("${local.mysql.url}")
+    private String db1Url;
+    @Value("${local.mysql.user}")
+    private String db1User;
+    @Value("${local.mysql.pass}")
+    private String db1Pass;
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(DatasourceConfig.class);
 	private Map<String, Object> datasourceMap;

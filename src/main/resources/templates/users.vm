@@ -36,7 +36,13 @@
                                     #end
                                 </td>
                                 <td>
-                                    <a class="waves-effect waves-light btn pink" href="javascript:removeUser('$user.id')">删除</a>
+                                    <a class="waves-effect waves-light btn pink"
+                                       href="javascript:removeUser('$user.id')">删除</a>
+                                    #if($user.isActivated == 1)
+                                        <a class="waves-effect waves-light btn green" href="javascript:activateUser('$user.id')">取消激活</a>
+                                    #else
+                                        <a class="waves-effect waves-light btn red" href="javascript:activateUser('$user.id')">激活</a>
+                                    #end
                                 </td>
                             </tr>
                             #end
@@ -132,6 +138,25 @@
         $.ajax({
             url: "/users/" + id,
             type: 'DELETE',
+            cache: false,
+            dataType: 'json',
+            success: function (data) {
+                if (data.success) {
+                    window.location.reload();
+                } else {
+                    alert(data.errorMsg);
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert("发生错误,请稍后重试");
+            }
+        });
+    }
+
+    function activateUser(id) {
+        $.ajax({
+            url: "/users/activate/" + id,
+            type: 'PUT',
             cache: false,
             dataType: 'json',
             success: function (data) {
