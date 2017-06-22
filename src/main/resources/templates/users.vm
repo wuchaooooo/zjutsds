@@ -1,23 +1,28 @@
 <link href="/vendors/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
 
 <main>
-    <div class="container">
+##    <div class="container">
         <div class="row">
             <div class="col l6">
                 <a class="waves-effect waves-light btn" href="#modal1">添加用户</a>
             </div>
         </div>
         <div class="row">
-            <div class="col l12">
+            <div class="col l12 m12 s12">
                 <div class="card-panel white">
-                    <table width="100%" class="display" cellspacing="0"
+                    <table width="100%" class="display table" cellspacing="0"
                            id="dataTables-example"
                            hidden>
                         <thead>
                         <tr>
                             <th>序号</th>
+                            <th>姓名</th>
                             <th>身份证号</th>
+                            <th>籍贯</th>
+                            <th>性别</th>
+                            <th>毕业高中</th>
                             <th>角色</th>
+                            <th>类型</th>
                             <th>操作</th>
                         </tr>
                         </thead>
@@ -27,7 +32,15 @@
                                 #set($i = $i + 1)
                             <tr class="odd gradeX">
                                 <td>$i</td>
-                                <td>$user.userName</td>
+                                <td>$!user.name</td>
+                                <td>$!user.userName</td>
+                                <td>$!user.nativePlace</td>
+                                <td>#if($user.gender == 1)
+                                    男
+                                #elseif($user.gender == 0)
+                                    女
+                                #end</td>
+                                <td>$!user.highSchool</td>
                                 <td>
                                     #if($user.role == "student")
                                         学生
@@ -35,13 +48,18 @@
                                         管理员
                                     #end
                                 </td>
+                                <td>$!user.sdsName</td>
                                 <td>
                                     <a class="waves-effect waves-light btn pink"
                                        href="javascript:removeUser('$user.id')">删除</a>
-                                    #if($user.isActivated == 1)
-                                        <a class="waves-effect waves-light btn green" href="javascript:activateUser('$user.id')">取消激活</a>
-                                    #else
-                                        <a class="waves-effect waves-light btn red" href="javascript:activateUser('$user.id')">激活</a>
+                                    #if($user.role == "student")
+                                        #if($user.isActivated == 1)
+                                            <a class="waves-effect waves-light btn green"
+                                               href="javascript:activateUser('$user.id')">取消激活</a>
+                                        #else
+                                            <a class="waves-effect waves-light btn red"
+                                               href="javascript:activateUser('$user.id')">激活</a>
+                                        #end
                                     #end
                                 </td>
                             </tr>
@@ -79,7 +97,7 @@
                 <button type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">提交</button>
             </div>
         </form>
-    </div>
+##    </div>
 </main>
 
 <script src="/vendors/datatables/js/jquery.dataTables.min.js"></script>
@@ -142,7 +160,8 @@
             dataType: 'json',
             success: function (data) {
                 if (data.success) {
-                    window.location.reload();
+//                    window.location.reload(true);
+                    window.location.href = window.location.href;
                 } else {
                     alert(data.errorMsg);
                 }
@@ -161,7 +180,8 @@
             dataType: 'json',
             success: function (data) {
                 if (data.success) {
-                    window.location.reload();
+//                    window.location.reload(true);
+                    window.location.href = window.location.href;
                 } else {
                     alert(data.errorMsg);
                 }

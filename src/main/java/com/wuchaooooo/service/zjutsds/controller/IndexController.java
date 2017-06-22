@@ -45,6 +45,7 @@ public class IndexController {
         VUser vUser = new VUser();
         vUser.setName(name);
         vUser.setUserName(username);
+        vUser.setRole("student");
         userService.saveUser(vUser);
         return "redirect:/login";
     }

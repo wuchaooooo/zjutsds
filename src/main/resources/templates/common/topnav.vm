@@ -32,8 +32,7 @@
                 <li>
                     <a class="dropdown-button" data-activates="dropdown1">
                         <div class="chip">
-##                            <img src="/images/1.jpg" alt="Contact Person">
-##                            <i class="large material-icons">person_pin</i>
+                            <img src="/images/1.jpg" alt="Contact Person">
                             #if($role == "ROLE_ADMIN")
                                 管理员
                             #else

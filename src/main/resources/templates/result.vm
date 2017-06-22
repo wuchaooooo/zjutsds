@@ -57,7 +57,7 @@
                 <div class="card-panel teal">
                     <span class="white-text">
                         你适合从事以下职业:<br><br>
-                        $career.desc
+                        $!career.desc
                     </span>
                 </div>
             </div>

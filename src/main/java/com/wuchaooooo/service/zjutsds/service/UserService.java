@@ -4,6 +4,7 @@ import com.wuchaooooo.service.zjutsds.dao.UserDAO;
 import com.wuchaooooo.service.zjutsds.pojo.po.PUser;
 import com.wuchaooooo.service.zjutsds.pojo.vo.VUser;
 import com.wuchaooooo.service.zjutsds.pojo.vo.VUserInfo;
+import com.wuchaooooo.service.zjutsds.utils.AuthUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -67,7 +68,10 @@ public class UserService {
         BeanUtils.copyProperties(vUser, pUser);
         String password = passwordEncoder.encode("666666");
         pUser.setPassword(password);
-        pUser.setRole("student");
+        if (AuthUtils.getAuthUser() == null) {
+            //新注册学生用户
+            pUser.setRole("student");
+        }
         return userDAO.saveUser(pUser);
     }
 

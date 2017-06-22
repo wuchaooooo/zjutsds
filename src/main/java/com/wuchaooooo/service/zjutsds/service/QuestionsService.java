@@ -40,6 +40,7 @@ public class QuestionsService {
         pUser.setI(map.get("I"));
         pUser.setSdsName(vResult.getSdsName());
         pUser.setGmtCreateTopic(new Date());
+        pUser.setUserName(AuthUtils.getAuthUser().getUserName());
         return userDAO.saveResult(pUser);
     }
 
@@ -80,27 +81,199 @@ public class QuestionsService {
     public VCareer getCareer(String sdsName) {
         PCareer pCareer = careerDAO.getCareer(sdsName);
         VCareer vCareer = new VCareer();
-        BeanUtils.copyProperties(pCareer, vCareer);
+        if (pCareer != null) {
+            BeanUtils.copyProperties(pCareer, vCareer);
+        }
         return vCareer;
     }
 
     public List<VMajor> listMajor(String sdsName) {
-        List<PMajor> pMajorList =  majorDAO.listMajor(sdsName);
+        List<String> sdsNameList = equalSdsName(sdsName);
+        List<PMajor> pMajorList = new ArrayList<>();
+        for (int i = 0; i < sdsNameList.size(); i++) {
+            List<PMajor> pMajorList1 = majorDAO.listMajor(sdsNameList.get(i));
+            if (pMajorList1 != null) {
+                for (PMajor pMajor : pMajorList1) {
+                    pMajorList.add(pMajor);
+                }
+            }
+        }
         List<VMajor> vMajorList = new ArrayList<>();
-        for (PMajor pMajor : pMajorList) {
-            VMajor vMajor = new VMajor();
-            BeanUtils.copyProperties(pMajor, vMajor);
-            vMajorList.add(vMajor);
+        if (pMajorList != null) {
+            for (PMajor pMajor : pMajorList) {
+                VMajor vMajor = new VMajor();
+                BeanUtils.copyProperties(pMajor, vMajor);
+                vMajorList.add(vMajor);
+            }
         }
         return vMajorList;
     }
 
+    //有些sdsName没有对应的学校专业，所以等同于其他的sdsName进行学校专业的查找
+    private List<String> equalSdsName(String sdsName) {
+        List<String> list = new ArrayList<>();
+        if (sdsName.equals("RAC")) {
+            list.add("RAI");
+            return list;
+        } else if (sdsName.equals("RAE")) {
+            list.add("RAI");
+            return list;
+        } else if (sdsName.equals("RAS")) {
+            list.add("RAI");
+            return list;
+        } else if (sdsName.equals("RSA")) {
+            list.add("SAI");
+            list.add("RSI");
+            return list;
+        } else if (sdsName.equals("RSC")) {
+            list.add("RCS");
+            list.add("RSE");
+            return list;
+        } else if (sdsName.equals("REA")) {
+            list.add("RES");
+            list.add("REI");
+            return list;
+        } else if (sdsName.equals("RCA")) {
+            list.add("RAI");
+            list.add("RCI");
+            return list;
+        } else if (sdsName.equals("CRA")) {
+            list.add("RAI");
+            list.add("CRS");
+            return list;
+        } else if (sdsName.equals("CIA")) {
+            list.add("CIS");
+            list.add("IAS");
+            return list;
+        } else if (sdsName.equals("CSI")) {
+            list.add("CIS");
+            return list;
+        } else if (sdsName.equals("CEA")) {
+            list.add("CES");
+            return list;
+        } else if (sdsName.equals("CAR")) {
+            list.add("RAI");
+            list.add("CRS");
+            return list;
+        } else if (sdsName.equals("CAE")) {
+            list.add("CES");
+            return list;
+        } else if (sdsName.equals("CAS")) {
+            list.add("CSA");
+            return list;
+        } else if (sdsName.equals("CAI")) {
+            list.add("AIR");
+            return list;
+        } else if (sdsName.equals("ECR")) {
+            list.add("ERC");
+            return list;
+        } else if (sdsName.equals("ECA")) {
+            list.add("ECS");
+            list.add("EAR");
+            return list;
+        } else if (sdsName.equals("ERA")) {
+            list.add("EAR");
+            return list;
+        } else if (sdsName.equals("EIA")) {
+            list.add("IES");
+            list.add("EIS");
+            return list;
+        } else if (sdsName.equals("EAC")) {
+            list.add("ECS");
+            list.add("EAR");
+            return list;
+        } else if (sdsName.equals("EAI")) {
+            list.add("EAR");
+            list.add("IES");
+            list.add("EIS");
+            return list;
+        } else if (sdsName.equals("SCR")) {
+            list.add("SRC");
+            return list;
+        } else if (sdsName.equals("SCA")) {
+            list.add("AIE");
+            list.add("AIR");
+            return list;
+        } else if (sdsName.equals("SCI")) {
+            list.add("SIC");
+            return list;
+        } else if (sdsName.equals("SRA")) {
+            list.add("SAC");
+            return list;
+        } else if (sdsName.equals("SAR")) {
+            list.add("SAC");
+            return list;
+        } else if (sdsName.equals("ASR")) {
+            list.add("ASE");
+            list.add("ASI");
+            return list;
+        } else if (sdsName.equals("ASC")) {
+            list.add("ASE");
+            list.add("ASI");
+            return list;
+        } else if (sdsName.equals("AEC")) {
+            list.add("AER");
+            return list;
+        } else if (sdsName.equals("AIC")) {
+            list.add("AIR");
+            return list;
+        } else if (sdsName.equals("ARC")) {
+            list.add("AER");
+            return list;
+        } else if (sdsName.equals("ARE")) {
+            list.add("AER");
+            return list;
+        } else if (sdsName.equals("ARS")) {
+            list.add("AER");
+            return list;
+        } else if (sdsName.equals("ARI")) {
+            list.add("AIR");
+            return list;
+        } else if (sdsName.equals("ACR")) {
+            list.add("AER");
+            return list;
+        } else if (sdsName.equals("ACE")) {
+            list.add("AER");
+            return list;
+        } else if (sdsName.equals("ACS")) {
+            list.add("ASE");
+            list.add("ASI");
+            return list;
+        } else if (sdsName.equals("ACI")) {
+            list.add("AIR");
+            return list;
+        } else if (sdsName.equals("IAC")) {
+            list.add("IAR");
+            return list;
+        } else if (sdsName.equals("IAE")) {
+            list.add("IAS");
+            return list;
+        } else if (sdsName.equals("IER")) {
+            list.add("IRE");
+            return list;
+        } else if (sdsName.equals("IEA")) {
+            list.add("IAS");
+            return list;
+        } else if (sdsName.equals("ICE")) {
+            list.add("IEC");
+            return list;
+        } else if (sdsName.equals("ICS")) {
+            list.add("ISC");
+            return list;
+        } else if (sdsName.equals("ICA")) {
+            list.add("IAR");
+            return list;
+        } else {
+            list.add(sdsName);
+            return list;
+        }
+    }
 
     private List<Map.Entry<String, Integer>> sort(Map<String, Integer> map) {
         //这里将map.entrySet()转换成list
-        List<Map.Entry<String,Integer>> list = new ArrayList<Map.Entry<String,Integer>>(map.entrySet());
+        List<Map.Entry<String, Integer>> list = new ArrayList<Map.Entry<String, Integer>>(map.entrySet());
         //然后通过比较器来实现排序
-        Collections.sort(list,new Comparator<Map.Entry<String,Integer>>() {
+        Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
             //降序排序
             @Override
             public int compare(Map.Entry<String, Integer> o1,
