@@ -73,4 +73,9 @@ public class QuestionsController {
         model.put("majors", vMajorList);
         return "result";
     }
+
+    @RequestMapping(value = "/1", method = RequestMethod.GET)
+    public String show() {
+        return "1";
+    }
 }
